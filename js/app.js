@@ -451,7 +451,7 @@ cardapio.metodos = {
 
                     let URL = `https://wa.me/${CELULAR_EMPRESA}?text=${encode}`
 
-                    $('#btnReserva').attr('href', URL)
+                    $('#btnEtapaResumo').attr('href', URL)
 
                 }
             })
