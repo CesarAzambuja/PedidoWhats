@@ -14,8 +14,8 @@
     --color-black-heavy: #000;
     --color-text: #4f4f4f;
     --color-text-out: #90908e;
-    --color-primary: #ffbf00;
-    --color-secundary: #fff2cc;
+    --color-primary: #fa0000;
+    --color-secundary: #8b0101;
     --color-white: #ffffff;
     --color-red: #e74c3c;
     --color-green: #2ecc71;
@@ -148,7 +148,7 @@ a.navbar-brand{
     height: 450px;
     width: 450px;
     border-radius: 160px;
-    background-color: #f4c949;
+    background-color: var(--color-secundary);
     position: absolute;
     right: 0;
     top: -80px;
@@ -173,7 +173,7 @@ a.navbar-brand{
     font-size: 14px;
     position: absolute;
     right: 0;
-    bottom: -75px;
+    bottom: 280px;
 }
 
 .card-case-name{
@@ -253,12 +253,13 @@ margin-bottom: 30px;
 }
 
 .card-item{
-    height: 360px;
+    height: 906px;
 
 }
 
 .card-item .img-produto img{
     width: 100%;
+    max-width: 300px;
     border-radius: 11px;
 }
 
@@ -324,7 +325,7 @@ margin-bottom: 30px;
 }
 
 .card-item:hover{
-    background-color: var(--color-primary);
+    background-color: #ee9645;
 }
 
 .card-item:hover .title-produto{
@@ -333,12 +334,29 @@ margin-bottom: 30px;
 
 .card-item:hover .add-carrinho{
     display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .card-item:hover .price-produto{
     color: var(--color-black-heavy) !important;
     margin-top: 20px;
 }
+
+.flex{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.price-produto-old{
+    color: var(--color-text-out);
+    font-size: 24px;
+    text-decoration: line-through;
+    margin-bottom: 0;
+}   
 
 .depoimentos{
     padding-top: 100px;

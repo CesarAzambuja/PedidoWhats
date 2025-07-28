@@ -7,8 +7,8 @@ var cardapio = {};
 var MEU_CARRINHO = [];
 var MEU_ENDERECO = null;
 var VALOR_CARRINHO = 0;
-var VALOR_ENTREGA = 5;
-var CELULAR_EMPRESA = '5513981768332';
+var VALOR_ENTREGA = 12;
+var CELULAR_EMPRESA = '5511992830070';
 var WHATSAPP_EMPRESA = `https://wa.me/${CELULAR_EMPRESA}`;
 var FACEBOOK_EMPRESA = 'https://facebook.com/cesar.azambuja';
 var INSTAGRAM_EMPRESA = 'https://instagram.com/cesarazambuja_o';
@@ -26,7 +26,7 @@ cardapio.eventos = {
 cardapio.metodos = {
 
     //Obtem a lista de itens do cardápio
-    obterItenscardapio: (categoria = 'burgers', vermais = false) => {
+    obterItenscardapio: (categoria = 'pizzas', vermais = false) => {
         var filtro = MENU[categoria];
         console.log(filtro);
 
@@ -40,7 +40,9 @@ cardapio.metodos = {
         $.each(filtro, (i, e) => {
             let temp = cardapio.templates.item.replace(/\${img}/g, e.img)
             .replace(/\${nome}/g, e.name)
+            .replace(/\${dsc}/g, e.dsc)
             .replace(/\${preco}/g, e.price.toFixed(2).replace('.',','))
+            .replace(/\${precoOld}/g, e.OldPrice.toFixed(2).replace('.',','))
             .replace(/\${id}/g, e.id);
 
             // Botão ver mais foi clicado (12Itens)
@@ -518,17 +520,25 @@ cardapio.metodos = {
 
 cardapio.templates = {
     item: `
-        <div class="col-12 col-lg-3 col-dm-3 col-sm-6 mb-5 animated fadeInUp">
+        <div class="col-12 col-lg-6 col-dm-6 col-sm-6 mb-5 animated fadeInUp">
             <div class="card card-item" id="\${id}">
-                <div class="img-produto">
+                <div class="img-produto text-center">
                     <img src="\${img}" alt="">
                 </div>
                 <p class="title-produto text-center mt-4">
                     <b>\${nome}</b>
                 </p>
-                <p class="price-produto text-center">
-                    <b>R$ \${preco}</b>
+                <p class="dsc-produto text-sm">
+                    \${dsc}
                 </p>
+                <div class=" flex">
+                    <p class="price-produto-old text-center">
+                        <b>R$ \${precoOld}</b>
+                    </p>
+                    <p class="price-produto text-center">
+                        <b>R$ \${preco}</b>
+                    </p>
+                </div>
 
                 <div class="add-carrinho">
                     <span class="btn-menos" onclick="cardapio.metodos.dininuirQuantidade('\${id}')"><i class=" fas fa-minus"></i></span>
