@@ -10,8 +10,8 @@ var VALOR_CARRINHO = 0;
 var VALOR_ENTREGA = 12;
 var CELULAR_EMPRESA = '5511992830070';
 var WHATSAPP_EMPRESA = `https://wa.me/${CELULAR_EMPRESA}`;
-var FACEBOOK_EMPRESA = 'https://facebook.com/cesar.azambuja';
-var INSTAGRAM_EMPRESA = 'https://instagram.com/cesarazambuja_o';
+var FACEBOOK_EMPRESA = '';
+var INSTAGRAM_EMPRESA = 'http://www.instagram.com/queroseuboga';
 
 cardapio.eventos = {
     init: () => {

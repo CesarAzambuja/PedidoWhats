@@ -15,7 +15,7 @@ var MENU = {
             "name": "🌶️ BEM DOTADA",
             "dsc": "Tem gente que gosta só da queijuda </br> Mas quem já provou a BEM DOTADA… não esquece nunca mais </br> Ela vem com aquele queijo que derrete devagarinho, escorrendo com vontade... </br> e uma calabresa parruda que marca presença, entra com tudo e faz o estrago </br> É suculenta, ousada, cheia de personalidade — e quando você sente o sabor, </br> não tem como disfarçar: </br> Você tá comendo a BEM DOTADA do SEU BÓGA.",
             "price": 59.90,
-            "OldPrice": 78.90
+            "OldPrice": 82.00
         }
     ]
 }
