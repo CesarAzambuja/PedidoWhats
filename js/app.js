@@ -320,6 +320,12 @@ cardapio.metodos = {
             if(validacep.test(cep)){
                 $.getJSON("https://viacep.com.br/ws/" + cep +"/json/?callback=?", function(dados){
 
+                    if(dados.localidade !== "Santos"){
+                        cardapio.metodos.mensagem('No momentos estamos entregando apenas em Santos-SP');
+                        $("#txtCEP").focus();
+                        return;
+                    }
+
                     if(!("erro" in dados)){
 
                         //Atualizar os campos com os valores retornados da API
